@@ -47,7 +47,12 @@ Now compilation time is very fast - about ~5ms.
 [ ] directory refactoring
 
 
-### Author ###
+### Upstream Author ###
 
 * Karol Parfieńczyk <parfienczyk@gmail.com>
 * [http://parfienczyk.pl](http://parfienczyk.pl)
+
+### Author ###
+
+* Christine Cardoso <christine@digmix.co>
+* [https://digimix.co](https://digimix.co)
