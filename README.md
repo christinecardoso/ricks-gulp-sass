@@ -1,1 +1,0 @@
-# ricks-gulp-sass
