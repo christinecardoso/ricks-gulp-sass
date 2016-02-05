@@ -1,0 +1,48 @@
+.call-area {
+	position: relative;
+    padding: 92px 0 60px;
+    background: transparent;
+	&::before {
+	    position: absolute;
+	    top: 0;
+	    bottom: 0;
+	    left:-500px;
+	    right: -500px;
+	    transform: rotate(-3.3deg);
+	    background: #f7f7f7;
+	    content: " ";
+	    display: block;
+	    z-index: 0;
+	}
+}
+
+.footer-container {
+	@extend .call-area;
+	@include bp (min-width, $bp-small) {
+		margin-top: 100px;
+	}
+	.footer {
+		position: relative;
+		padding: 15px;
+		@include bp (min-width, $bp-small) {
+			padding: 30px;
+		}
+		.block-subscribe {
+			@include bp (min-width, $bp-small) {
+				margin-top: -180px;
+				background: $c-green-shaded;
+				display: block;
+				padding: 20px 35px 40px;
+				color: #000;
+				width: 33.333%;
+				.block-title * {
+					color: white;
+					font-weight: bold;
+				}
+				.block-content {
+					padding-top: 0;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,165 @@
+@CHARSET "UTF-8";
+
+.amfinder-vertical,
+.amfinder-horizontal {
+    border: 1px solid #C4C1BC;
+    background: #F8F7F5;
+    padding: 8px;
+}
+.amfinder-vertical .dropdown-title,
+.amfinder-horizontal .dropdown-title {
+    font-size: 12px;
+    font-weight: bold;
+}
+.amfinder-vertical {
+    .dropdown-element {
+        padding-bottom: 4px;
+    }
+}
+
+.sidebar {
+	.amfinder-responsive {
+		background: darken($c-green-shaded, 5%);
+		padding: 15px;
+		color: white;
+		li {
+			width: 100%;
+		}
+	}
+}
+
+.col-main {
+	.part-finder {
+		background: linear-gradient(90deg, darken(#00b400, 4%),$c-green-shaded );
+		padding: 15px 15px 0;
+		color: white;
+		margin-top: -100px;
+		position: relative;
+		box-shadow: 1px 2px 3px #888;
+		.amfinder-toggle {
+			padding: 0;
+		}
+		.amfinder-responsive {
+			li {
+				width: 32.333%;
+				&.last {
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+}
+
+/* Responsive finder styles */
+
+.amfinder-responsive {
+    display: block;
+    .amfinder-title {
+        //display: none;
+        display: block;
+        span {
+            position: relative;
+        }
+    }
+    .amfinder-toggle {
+        padding: 10px;
+        display: block;
+		.dropdown-title {
+		    font-family: $f-stack-special;
+		    font-size: .85em;
+		}
+    }
+    .amfinder-buttons {
+        display: block;
+        width: 100%;
+    }
+    li {
+        display: inline-block;
+        min-width: 160px;
+        //width: 100%;
+        margin-bottom: 20px;
+        &.last {
+            display: block;
+            width: 100%;
+            .amfinder-buttons {
+	            display: block !important;
+            }
+        }
+        div {
+            select {
+                width: 100%;
+                @extend .form-control.input-small;
+                @include bp (min-width, $bp-medium + 1) {
+				    &:hover {
+					    border-color: darken(#ccc, 15%);
+				    }
+			    }
+            }
+        }
+    }
+}
+
+/* @media only screen and (max-width: 770px) */
+@include bp (max-width, $bp-medium) {
+	.amfinder-responsive {
+	    li {
+	        display: block;
+	        width: 100%;
+	        margin-bottom: 20px;
+	    }
+	    .amfinder-toggle {
+	        border: 1px solid #cccccc;
+	        display: none;
+	        border-top: none;
+	    }
+	    .amfinder-title {
+	        display: block;
+	        color: $c-text;
+	        font-family: $f-stack-special;
+	        font-size: 14px;
+	        font-style: normal;
+	        line-height: 1.4;
+	        text-transform: uppercase;
+	        background-color: #f4f4f4;
+	        border: 1px solid #cccccc;
+	        padding-bottom: 7px;
+	        padding-left: 24px;
+	        padding-right: 10px;
+	        padding-top: 10px;
+	        &:hover {
+	            cursor: pointer;
+	        }
+	        span {
+	            &:before {
+	                content: '';
+	                position: absolute;
+	                width: 0;
+	                height: 0;
+	                display: block;
+	                border-top: 4px solid transparent;
+	                border-bottom: 4px solid transparent;
+	                border-left: 4px solid #3399cc;
+	                border-right: none;
+	                left: -15px;
+	                top: 50%;
+	                margin-top: -5px;
+	            }
+	        }
+	    }
+	    &.open {
+	        .amfinder-title {
+	            span {
+	                &:before {
+	                    border-top: 4px solid #3399cc;
+	                    border-bottom: none;
+	                    border-left: 4px solid transparent;
+	                    border-right: 4px solid transparent;
+	                }
+	            }
+	        }
+	        .amfinder-toggle {
+	            display: block;
+	        }
+	    }
+	}
+}

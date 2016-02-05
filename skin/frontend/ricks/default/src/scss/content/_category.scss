@@ -1,0 +1,406 @@
+//
+// Magento
+//
+// NOTICE OF LICENSE
+//
+// This source file is subject to the Academic Free License (AFL 3.0)
+// that is bundled with this package in the file LICENSE_AFL.txt.
+// It is also available through the world-wide-web at this URL:
+// http://opensource.org/licenses/afl-3.0.php
+// If you did not receive a copy of the license and are unable to
+// obtain it through the world-wide-web, please send an email
+// to license@magento.com so we can send you a copy immediately.
+//
+// DISCLAIMER
+//
+// Do not edit or add to this file if you wish to upgrade Magento to newer
+// versions in the future. If you wish to customize Magento for your
+// needs please refer to http://www.magento.com for more information.
+//
+// @category    design
+// @package     ricks_default
+// @copyright   Copyright (c) 2006-2015 X.commerce, Inc. (http://www.magento.com)
+// @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+//
+
+
+.block {
+	&.let-us-help {
+		padding: 20px;
+		//background: $c-module-background;
+		border: 8px solid $c-module-background;
+		h3 {
+			color: $c-text-dark;
+			font-weight: bold;
+		}
+		p {
+			font-size: .7em;
+			margin-bottom: 10px;
+		}
+		.phone-number {
+			display:block;
+			font-size: 1em;
+			//font-weight: bold;
+		}
+	}
+}
+
+
+
+.clip-1 {
+	-webkit-clip-path: polygon(100% 46%, 100% 100%, 0 100%);
+	clip-path: polygon(100% 46%, 100% 100%, 0 100%);
+}
+.clip-2 {
+	-webkit-clip-path: polygon(100% 0%, 80% 100%, 0% 100%);
+	clip-path: polygon(100% 0%, 80% 100%, 0% 100%);
+}
+
+.clip-3 {
+	-webkit-clip-path: polygon(110% 60%, 70% -10%, 0% 110%);
+	clip-path: polygon(110% 60%, 70% -10%, 0% 110%);
+}
+
+.vehicle.mmy {
+	font-size: 1.6em;
+	color: $c-text-dark;
+	font-weight:600;
+	letter-spacing: -1px;
+}
+
+figure {
+	&.category-image {
+		background: black;
+		border:none;
+		padding:0;
+		height: 250px;
+		overflow: hidden;
+		.image-wrapper {
+			//position: absolute;
+			//bottom:0;
+			background-size: cover;
+			@extend .clip-2;
+			position: relative;
+			width: 100%;
+			height: 100%;
+		    background-position: center center;
+			img {
+				display: none;
+				width: 100%;
+				height: 250px;
+				@extend .clip-2;
+			}
+		}
+		figcaption {
+			position: absolute;
+			top:10px;
+			left: 10px;
+			padding:20px;
+			//background: rgba(255, 255, 255, 0.7);
+			.vehicle.mmy {
+				color: white;
+				span.year {
+					color: #999;
+					font-weight: normal;
+				}
+			}
+		}
+		&.dark {
+			background: black;
+			&.dots {
+				background: linear-gradient(170deg, rgba(0, 0, 0, .70) 30%, #000), url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' height='10px' width='10px'><text x='0' y='15' fill='#999' font-size='12'>+</text></svg>");
+
+			}
+			figcaption {
+				h1 {
+					color: white;
+				}
+				.vehicle.mmy {
+					color: white;
+					span.year {
+						color: #999;
+					}
+				}
+			}
+		}
+		&.light {
+			background: linear-gradient(170deg,rgba(208, 98, 98, 0) 30%, #000), url("http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/gplaypattern.png");
+			figcaption {
+				.vehicle.mmy {
+					color: $c-text-dark;
+					span.year {
+						color: #999;
+					}
+				}
+			}
+		}
+		&.green {
+			background: linear-gradient(168.5deg, #4FC100 55%, #419a00 60%, #000000 100%);
+			figcaption {
+				h1 {
+					color: black;
+				}
+				.vehicle.mmy {
+					color: white;
+					span.year {
+						color: #D0D0D0;
+					}
+				}
+			}
+
+		}
+		&.alt {
+			.image-wrapper {
+				@extend .clip-1;
+				img {
+					@extend .clip-1;
+				}
+			}
+		}
+		&.alt-2 {
+			.image-wrapper {
+				@extend .clip-3;
+				img {
+					@extend .clip-3;
+				}
+			}
+		}
+		&.fw {
+			margin-top: -15px;
+			margin-right: -15px;
+			margin-left: -15px;
+			@include bp (min-width, $bp-xsmall + 1) {
+				margin-left: -30px;
+				margin-right: -30px;
+				margin-top: -30px;
+			}
+		}
+	}
+}
+
+
+
+select {
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+
+.toolbar {
+	select {
+		@media(min-width:768px) {
+			height: 30px;
+			font-size: 12px;
+		}
+	}
+}
+
+.products-grid {
+	.add-to-links {
+		@media(min-width:768px) {
+			font-size: 12px;
+		}
+	}
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    &[disabled], &[readonly], &:disabled, &[disabled='disabled'] {
+		background-color: #eee;
+		opacity: 1;
+		cursor: not-allowed;
+    }
+    &.input-small {
+		height: 30px;
+		padding: 5px 10px;
+		font-size: 12px;
+		line-height: 1.5;
+		border-radius: 3px;
+	    &[disabled], &[readonly], &:disabled, &[disabled='disabled'] {
+			background-color: #eee;
+			opacity: 1;
+			cursor: not-allowed;
+	    }
+    }
+}
+
+
+.wrapper {
+	div.page {
+		background: url(../images/header-bg.png) no-repeat 0 0;
+	}
+}
+/* ============================================ *
+ * Category Landing Pages
+ * ============================================ */
+
+.category-image {
+    position: relative;
+}
+
+.categorylandingMainblock {
+    border: 1px solid #E2E2E2;
+    padding: 7px;
+}
+
+.catblocks {
+    float: left;
+    padding: 0 0 20px 0;
+    width: 100%;
+}
+
+.catblocks li {
+    position: relative;
+    float: left !important;
+    width: 23% !important;
+    margin-right: percentage(8/300) !important;
+    margin-bottom: $box-spacing;
+    border: 1px solid $c-module-border;
+    padding: 10px;
+}
+
+.catblocks li:hover {
+    border-color: $c-module-border-highlight;
+}
+
+@include bp(max-width, $bp-medium) {
+    .catblocks li {
+        width: 49% !important;
+        margin-right: 2% !important;
+    }
+
+    .catblocks li:nth-child(even) {
+        margin-right: 0 !important;
+    }
+}
+
+@include bp(max-width, $bp-xsmall) {
+    .catblocks li {
+        width: 100% !important;
+        margin-right: 0 !important;
+        float: none;
+    }
+}
+
+.catblocks li:last-child {
+    margin-right: 0 !important;
+}
+
+.catblocks li img {
+    width: 100%;
+    max-width: 100%;
+}
+
+.catblocks li a span {
+    color: #FFFFFF;
+    position: absolute;
+    background-color: #7B7C7B;
+    font-family: $f-stack-special;
+    font-size: 17px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    padding: 5px 10px;
+    margin-right: 10px;
+}
+
+.catblocklinks a {
+    color: #FFFFFF;
+    text-decoration: none
+}
+
+.catlandingbottomPromoblock {
+    float: left;
+    width: 100%;
+    border: 1px solid #E2E2E2;
+    margin-bottom: 100px;
+}
+
+.catalog-category-view div.categoryland-caption {
+    display: block;
+    margin: 0;
+    position: absolute;
+    color: #000000;
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 36px;
+    text-align: center;
+}
+
+.catalog-category-view div.categoryland-caption span.blue-big-text {
+    color: #3399CC;
+    font-size: 50px;
+    font-weight: 800;
+    padding: 0 0 0 8px;
+}
+
+.catalog-category-view div.categoryland-caption span.blue-big-text {
+    padding: 0 !important
+}
+
+.catalog-category-view div.categoryland-caption span.three-dots {
+    background: url(../images/bg_threeDots.png) no-repeat center center;
+    display: block;
+    height: 20px;
+}
+
+.catalog-category-view div.categoryland-caption p.desc {
+    font: italic 18px/28px Georgia, "Times New Roman", Times, serif;
+    color: #656565;
+}
+
+.cms-home #homepage-main-slides div.slides_control div div.slideshow-caption a.link:hover,
+.cms-home #homepage-main-slides div.slides_control div div.slideshow-caption span.link:hover {
+    text-decoration: underline;
+    color: #1189C5;
+}
+
+.cms-home #homepage-main-slides div.slides_control div div.slideshow-caption span.blue-big-text,
+.catalog-category-view div.categoryland-caption span.blue-big-text {
+    color: #3399CC;
+    font-size: 50px;
+    font-weight: 800;
+    padding: 0 0 0 8px;
+}
+
+.catalog-category-view div.categoryland-caption span.blue-big-text {
+    padding: 0 !important
+}
+
+.cms-home #homepage-main-slides div.slides_control div div.slideshow-caption span.three-dots,
+.catalog-category-view div.categoryland-caption span.three-dots {
+    background: url(../images/bg_threeDots.png) no-repeat center center;
+    display: block;
+    height: 20px;
+}
+
+.cms-home #homepage-main-slides div.slides_control div div.slideshow-caption p.desc,
+.catalog-category-view div.categoryland-caption p.desc {
+    font: italic 18px/28px Georgia, "Times New Roman", Times, serif;
+    color: #656565;
+}

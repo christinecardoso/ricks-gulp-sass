@@ -1,9 +1,9 @@
 //
 // Variables
 // ======================================================
-var SKIN_DIR = './skin/frontend/package/default';
-var APP_DIR = './app/design/frontend/package/default';
-var HOST_URL = 'http://site.digimix.co/';   // e.g.: http://magento-store-1.local
+var SKIN_DIR = './skin/frontend/ricks/default';
+var APP_DIR = './app/design/frontend/ricks/default';
+var HOST_URL = 'http://ricks1.digimix.co/';   // e.g.: http://magento-store-1.local
 // IMPORTANT: we don't why but gulp works very slow when domain is: http://some_address.local
 // better solution and faster reload is when domain is: http://some_address.dev
 

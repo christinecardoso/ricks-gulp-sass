@@ -1,0 +1,40 @@
+// =============================================
+// Mixin - Breakpoint
+// =============================================
+
+$socialProfiles: pinterest "\f0d2", facebook "\f09a", google-plus "\f0d5", twitter "\f099", instagram "\f16d", mail "\f0e0";
+
+@each $className in $socialProfiles {
+	.menu-#{nth($className, 1)} {
+		$socialProfile: nth($className, 2);
+		float: none !important;
+		display: inline-block !important;
+		> a {
+			background: transparent;
+			background-color: transparent;
+			border-radius: 4px;
+			margin-bottom: 0;
+		    padding: 0;
+		    text-decoration: none;
+		    font-size: 30px;
+			display: block;
+			text-align: center;
+			span {
+				display: none;
+			}
+			&:before {
+				font-family: "FontAwesome";
+				color:  $c-button;
+				content: $socialProfile;
+				font-size: 30px;
+			}
+			&:hover {
+				background: transparent;
+				background-color: transparent;
+				&:before {
+					color: darken($c-button, 5%);
+				}
+			}
+		}
+	}
+}
