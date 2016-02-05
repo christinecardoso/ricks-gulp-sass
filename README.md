@@ -1,4 +1,4 @@
-# ricks-gulp-sass: Magento + RWD Template + SASS + GulpJS + BrowserSync #
+# Magento + RWD Template + SASS + GulpJS + BrowserSync #
 
 This is default Magento RWD template with Gulp (Sass) without Compass.
 Now compilation time is very fast - about ~5ms.  
